@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Result</title>
 </head>
 <body>
-$END$
+    <h1>Prediction Result</h1>
+    <h2>Predicted Value: {{ predicted_value }}</h2>
+
+    <h3>Matching Images:</h3>
+    {% for plot in plots %}
+        <div>
+            <img src="{{ url_for('plot_file', filename=plot) }}" alt="Plot Image" style="max-width: 100%; height: auto;">
+        </div>
+    {% endfor %}
 </body>
 </html>

@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Handwritten Character Recognition</title>
 </head>
 <body>
-$END$
+    <h1>Handwritten Character Recognition</h1>
+
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Form for uploading image file for processing -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <h2>Recognize the Picture</h2>
+        <input type="file" name="imagefile" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- Form for registering a new image -->
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <h2>Register New Image</h2>
+        <input type="file" name="imagefile" required>
+        <input type="text" name="actual_value" placeholder="Enter the actual value" required>
+        <button type="submit">Register</button>
+    </form>
 </body>
 </html>

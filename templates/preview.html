@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Preview</title>
 </head>
 <body>
-$END$
+    <h1>Preview</h1>
+    <h2>Image File: {{ image_path.split('/')[-1] }}</h2>
+    <img src="{{ url_for('uploaded_file', filename=image_path.split('/')[-1]) }}" alt="Uploaded Image" style="max-width: 100%; height: auto;">
+
+    <!-- Form to process the uploaded image -->
+    <form action="/process" method="post">
+        <input type="hidden" name="image_path" value="{{ image_path }}">
+        <button type="submit">Process Image</button>
+    </form>
 </body>
 </html>
