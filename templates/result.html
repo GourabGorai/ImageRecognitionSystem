@@ -2,17 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Prediction Result</h1>
-    <h2>Predicted Value: {{ predicted_value }}</h2>
+    <div class="container">
+        <header>
+            <h1>Recognition Result</h1>
+        </header>
 
-    <h3>Matching Images:</h3>
-    {% for plot in plots %}
-        <div>
-            <img src="{{ url_for('plot_file', filename=plot) }}" alt="Plot Image" style="max-width: 100%; height: auto;">
-        </div>
-    {% endfor %}
+        <section>
+            <p>Predicted value: <strong>{{ predicted_value }}</strong></p>
+        </section>
+
+        <section>
+            <h2>Matched Images</h2>
+            <div class="image-grid">
+                {% for plot in plots %}
+                    <img src="{{ url_for('plot_file', filename=plot) }}" alt="Matched Image" class="result-image">
+                {% endfor %}
+            </div>
+        </section>
+    </div>
 </body>
 </html>

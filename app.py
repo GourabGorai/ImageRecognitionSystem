@@ -95,6 +95,7 @@ def process():
 
     data = pd.read_csv(csv_path)
     data = pd.DataFrame(data)
+    data.iloc[:,-1]=data.iloc[:,-1].astype(str)
     imagedata = data.iloc[:, :-1].values.tolist()
     target = data['actual_value'].tolist()
 
@@ -102,8 +103,17 @@ def process():
 
     # Making model for Logistic Regression
     X_train, y_train = imagedata, target
-    model = LogisticRegression()
-    model.fit(X_train, y_train)
+
+    # Exception handling for logistic regression
+    try:
+        if len(set(y_train)) <= 1:
+            raise ValueError("there is only 1 option, please provide more options")
+
+        model = LogisticRegression()
+        model.fit(X_train, y_train)
+    except ValueError as e:
+        flash(str(e))
+        return redirect(url_for('index'))
 
     img = Image.open(image_path)
     img = img.resize((1080, 1080))

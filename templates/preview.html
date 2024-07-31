@@ -2,17 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Preview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Preview</h1>
-    <h2>Image File: {{ image_path.split('/')[-1] }}</h2>
-    <img src="{{ url_for('uploaded_file', filename=image_path.split('/')[-1]) }}" alt="Uploaded Image" style="max-width: 100%; height: auto;">
+    <div class="container">
+        <header>
+            <h1>Preview Image</h1>
+        </header>
 
-    <!-- Form to process the uploaded image -->
-    <form action="/process" method="post">
-        <input type="hidden" name="image_path" value="{{ image_path }}">
-        <button type="submit">Process Image</button>
-    </form>
+        <img src="{{ url_for('uploaded_file', filename=image_path.split('/')[-1]) }}" alt="Uploaded Image" class="preview-image">
+
+        <section>
+            <h2>Process Image</h2>
+            <form action="{{ url_for('process') }}" method="post">
+                <input type="hidden" name="image_path" value="{{ image_path }}">
+                <input type="submit" value="Process" class="btn">
+            </form>
+        </section>
+    </div>
 </body>
 </html>

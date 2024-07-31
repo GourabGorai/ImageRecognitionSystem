@@ -2,35 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Handwritten Character Recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Handwritten Character Recognition</h1>
+    <div class="container">
+        <header>
+            <h1>Image Recognition System</h1>
+        </header>
 
-    <!-- Display flash messages -->
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flashes">
+            {% for message in messages %}
+              <div class="flash-message">{{ message }}</div>
+            {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
 
-    <!-- Form for uploading image file for processing -->
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <h2>Recognize the Picture</h2>
-        <input type="file" name="imagefile" required>
-        <button type="submit">Upload</button>
-    </form>
+        <section>
+            <h2>Upload an Image for Processing</h2>
+            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                <label for="imagefile" class="file-label">Select image:</label>
+                <input type="file" id="imagefile" name="imagefile" class="file-input">
+                <input type="submit" value="Upload" class="btn">
+            </form>
+        </section>
 
-    <!-- Form for registering a new image -->
-    <form action="/register" method="post" enctype="multipart/form-data">
-        <h2>Register New Image</h2>
-        <input type="file" name="imagefile" required>
-        <input type="text" name="actual_value" placeholder="Enter the actual value" required>
-        <button type="submit">Register</button>
-    </form>
+        <section>
+            <h2>Register a New Image</h2>
+            <form action="{{ url_for('register_new_image') }}" method="post" enctype="multipart/form-data">
+                <label for="imagefile" class="file-label">Select image:</label>
+                <input type="file" id="imagefile" name="imagefile" class="file-input">
+                <label for="actual_value" class="text-label">Actual value:</label>
+                <input type="text" id="actual_value" name="actual_value" class="text-input">
+                <input type="submit" value="Register" class="btn">
+            </form>
+        </section>
+    </div>
 </body>
 </html>

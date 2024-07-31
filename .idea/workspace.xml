@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d64d6705-4e73-4100-a4a1-c56c340ea00a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HandWrittenPart2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HandWrittenPart2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d64d6705-4e73-4100-a4a1-c56c340ea00a" name="Changes" comment="Update 2">
+      <change afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/0309ec5f88f94da182f2f08e567bb21e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/0bbf1bbdd4cf4d799b8a1d2f680d2cd5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/0e2fc9bb208b4a638435d672f3d5d77f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/4c0b113c8ba9463dbcb4d973ffff456d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/744032eeec3a45f7975960db9337b13e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/78db101e62d74c43bb9389bde1d104f5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/bc9ee16d6fdf4fc9985042222ac0bbac.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/preview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
@@ -31,6 +23,7 @@
       <list>
         <option value="Flask Main" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -69,21 +62,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Flask server.HandWrittenPart2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Flask server.HandWrittenPart2.executor": "Run",
+    "Python.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="HandWrittenPart2" type="Python.FlaskServer">
       <module name="HandWrittenPart2" />
@@ -122,15 +116,29 @@
       <workItem from="1722251715164" duration="3806000" />
       <workItem from="1722263892381" duration="4720000" />
       <workItem from="1722318534173" duration="5454000" />
-      <workItem from="1722345742440" duration="6409000" />
+      <workItem from="1722345742440" duration="6854000" />
+      <workItem from="1722395029222" duration="2199000" />
     </task>
+    <task id="LOCAL-00001" summary="Update 2">
+      <option name="closed" value="true" />
+      <created>1722352632816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722352632816</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 2" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HandWrittenPart2$HandWrittenPart2.coverage" NAME="HandWrittenPart2 Coverage Results" MODIFIED="1722351565380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/HandWrittenPart2$HandWrittenPart2.coverage" NAME="HandWrittenPart2 Coverage Results" MODIFIED="1722396822586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/HandWrittenPart2$app.coverage" NAME="app Coverage Results" MODIFIED="1722321691060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
